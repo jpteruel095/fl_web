@@ -83,7 +83,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ],
       ),
       bottomNavigationBar: Container(
-        height: MediaQuery.of(context).size.width < 600 ? 75 : 0,
+        height: MediaQuery.of(context).size.width < 600 ? 82 : 0,
         width: MediaQuery.of(context).size.width,
         child: MediaQuery.of(context).size.width < 600
             ? BottomNavigationBar(
