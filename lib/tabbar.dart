@@ -1,10 +1,7 @@
-/// Flutter code sample for LayoutBuilder
-
-// This example uses a [LayoutBuilder] to build a different widget depending on the available width. Resize the
-// DartPad window to see [LayoutBuilder] in action!
-
+// this is where the botttom tab bar is modified
+// or the left bar on the desktop
+// which will navigate between the app's views
 import 'package:flutter/material.dart';
-import 'mystatelesswidget.dart';
 
 /// Flutter code sample for NavigationRail
 
@@ -12,6 +9,8 @@ import 'mystatelesswidget.dart';
 // [NavigationRailDestination]s. The main content is separated by a divider
 // (although elevation on the navigation rail can be used instead). The
 // `_selectedIndex` is updated by the `onDestinationSelected` callback.
+
+import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
@@ -81,30 +80,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
           )
         ],
-      ),
-      bottomNavigationBar: Container(
-        height: MediaQuery.of(context).size.width < 600 ? 75 : 0,
-        width: MediaQuery.of(context).size.width,
-        child: MediaQuery.of(context).size.width < 600
-            ? BottomNavigationBar(
-                currentIndex: 0, // this will be set when a new tab is tapped
-                items: [
-                  BottomNavigationBarItem(
-                    icon: new Icon(Icons.home),
-                    title: new Text('Home'),
-                  ),
-                  BottomNavigationBarItem(
-                    icon: new Icon(Icons.mail),
-                    title: new Text('Messages'),
-                  ),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.person), title: Text('Profile'))
-                ],
-              )
-            : Container(
-                color: Colors.white,
-                width: MediaQuery.of(context).size.width,
-              ),
       ),
     );
   }
